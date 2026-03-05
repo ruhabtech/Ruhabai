@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ruhab AI</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#0f172a;
+color:white;
+text-align:center;
+}
+
+#chat{
+width:60%;
+margin:auto;
+margin-top:50px;
+}
+
+#messages{
+height:300px;
+border:1px solid gray;
+overflow-y:auto;
+padding:10px;
+}
+
+input{
+width:70%;
+padding:10px;
+}
+
+button{
+padding:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Ruhab AI</h1>
+
+<div id="chat">
+
+<div id="messages"></div>
+
+<input id="input" placeholder="Ask something...">
+
+<button onclick="send()">Send</button>
+
+</div>
+
+<script>
+
+function send(){
+
+let text = document.getElementById("input").value
+
+let user = document.createElement("p")
+user.innerText = "You: " + text
+
+document.getElementById("messages").appendChild(user)
+
+let ai = document.createElement("p")
+ai.innerText = "AI: Hello! This is a demo response."
+
+document.getElementById("messages").appendChild(ai)
+
+}
+
+</script>
+
+</body>
+</html>
